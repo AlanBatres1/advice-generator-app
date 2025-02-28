@@ -8,7 +8,7 @@ const AdviceCard = () => {
     const getAdvice = async () => {
         const data = await fetchAdvice();
         setAdviceId(data.slip.id);
-        setAdvice(data.slip.advice);
+        setAdvice(`"${data.slip.advice}"`);
         console.log(data.slip);
     }
 
